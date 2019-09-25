@@ -19,6 +19,10 @@
     <ClInclude Include="src\Fugu\Log.h">
       <Filter>Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Events\Event.h" />
+    <ClInclude Include="src\Fugu\Events\KeyEvent.h" />
+    <ClInclude Include="src\Fugu\Events\MouseEvent.h" />
+    <ClInclude Include="src\Fugu\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
