@@ -17,6 +17,9 @@ project "Fugu"
 	targetdir ("bin/" .. outputDir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputDir .. "/%{prj.name}")
 
+	pchheader "fgpch.h"
+	pchsource "%{prj.name}/src/fgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

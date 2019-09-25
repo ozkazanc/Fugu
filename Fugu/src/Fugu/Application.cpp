@@ -1,4 +1,5 @@
-# include "Application.h"
+#include "fgpch.h"
+#include "Application.h"
 
 #include "Fugu/Log.h"
 #include "Fugu/Events/ApplicationEvent.h"

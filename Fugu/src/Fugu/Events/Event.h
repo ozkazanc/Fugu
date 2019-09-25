@@ -1,9 +1,6 @@
 #pragma once
-
+#include "fgpch.h"
 #include "Fugu/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Fugu {
 	// Events are blocking, meaning when an event ocurrs

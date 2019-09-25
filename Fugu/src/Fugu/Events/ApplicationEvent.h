@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Fugu {
 	class FUGU_API WindowResizeEvent : public Event {
 	private:

@@ -4,6 +4,9 @@
     <Filter Include="Fugu">
       <UniqueIdentifier>{7C71857C-68A8-860D-1195-6C10FDAA020F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fugu\Events">
+      <UniqueIdentifier>{E01935DF-4CCF-ADD4-D5C3-A7AB4178A4D8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fugu.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Fugu\EntryPoint.h">
       <Filter>Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Events\ApplicationEvent.h">
+      <Filter>Fugu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Events\Event.h">
+      <Filter>Fugu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Events\KeyEvent.h">
+      <Filter>Fugu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Events\MouseEvent.h">
+      <Filter>Fugu\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Log.h">
       <Filter>Fugu</Filter>
     </ClInclude>
-    <ClInclude Include="src\Fugu\Events\Event.h" />
-    <ClInclude Include="src\Fugu\Events\KeyEvent.h" />
-    <ClInclude Include="src\Fugu\Events\MouseEvent.h" />
-    <ClInclude Include="src\Fugu\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\fgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Fugu\Log.cpp">
       <Filter>Fugu</Filter>
     </ClCompile>
+    <ClCompile Include="src\fgpch.cpp" />
   </ItemGroup>
 </Project>
