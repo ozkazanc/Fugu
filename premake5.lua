@@ -9,6 +9,12 @@ workspace "Fugu"
 
 outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Fugu/vendor/GLFW/include"
+
+include "Fugu/vendor/GLFW"
+
 project "Fugu"
 	location "Fugu"
 	kind "SharedLib"
@@ -28,8 +34,15 @@ project "Fugu"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

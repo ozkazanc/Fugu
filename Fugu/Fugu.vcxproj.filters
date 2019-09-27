@@ -7,6 +7,9 @@
     <Filter Include="Fugu\Events">
       <UniqueIdentifier>{E01935DF-4CCF-ADD4-D5C3-A7AB4178A4D8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fugu\Platforms">
+      <UniqueIdentifier>{C343243D-AF11-1843-98A5-88698412F4A7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fugu.h" />
@@ -34,6 +37,12 @@
     <ClInclude Include="src\Fugu\Log.h">
       <Filter>Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\WindowsWindow.h">
+      <Filter>Fugu\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Window.h">
+      <Filter>Fugu</Filter>
+    </ClInclude>
     <ClInclude Include="src\fgpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="src\Fugu\Log.cpp">
       <Filter>Fugu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\WindowsWindow.cpp">
+      <Filter>Fugu\Platforms</Filter>
     </ClCompile>
     <ClCompile Include="src\fgpch.cpp" />
   </ItemGroup>
