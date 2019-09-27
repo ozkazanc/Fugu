@@ -1,4 +1,5 @@
 #pragma once
+
 #include "fgpch.h"
 #include "Fugu/Core.h"
 

@@ -15,6 +15,7 @@ namespace Fugu {
 			unsigned int Height;
 
 			bool Vsync;
+			EventCallbackFn EventCallback;
 		};
 
 		WindowData m_Data;
@@ -32,6 +33,7 @@ namespace Fugu {
 
 		void SetVsync(bool enable) override;
 		bool IsVsync() const override;
+		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 
 	};
 

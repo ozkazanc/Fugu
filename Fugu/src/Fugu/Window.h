@@ -3,6 +3,7 @@
 #include "fgpch.h"
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace Fugu {
 
@@ -20,6 +21,8 @@ namespace Fugu {
 
 	class FUGU_API Window {
 	public:
+		using EventCallbackFn = std::function<void(Event&)>;
+
 		Window() {}
 		virtual ~Window() {}
 
@@ -30,6 +33,7 @@ namespace Fugu {
 
 		virtual void SetVsync(bool enable) = 0;
 		virtual bool IsVsync() const = 0;
+		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
