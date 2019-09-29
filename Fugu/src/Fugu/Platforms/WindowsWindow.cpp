@@ -1,8 +1,11 @@
 #include "fgpch.h"
 #include "WindowsWindow.h"
+
 #include "Fugu/Events/KeyEvent.h"
 #include "Fugu/Events/MouseEvent.h"
 #include "Fugu/Events/ApplicationEvent.h"
+
+#include "glad/glad.h"
 
 namespace Fugu{
 
@@ -44,6 +47,10 @@ namespace Fugu{
 			FG_CORE_ASSERT(m_Window, "Window could not be created!");
 			
 			glfwMakeContextCurrent(m_Window);
+
+			int success = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+			FG_CORE_ASSERT(success, "Failed to initialize Glad!");
+
 			glfwSetWindowUserPointer(m_Window, &m_Data);
 			SetVsync(true);
 

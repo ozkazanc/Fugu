@@ -4,7 +4,7 @@
 #include "Fugu/Log.h"
 #include "Fugu/Events/ApplicationEvent.h"
 
-#include <GLFW/glfw3.h>
+#include "glad/glad.h"
 
 #define BIND_EVENT_FC(x) std::bind(&Application::x, this, std::placeholders::_1)
 
@@ -13,6 +13,9 @@ namespace Fugu {
 	Application::Application() {
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FC(OnEvent));
+
+		unsigned int id;
+		glGenBuffers(1, &id);
 	}
 
 	Application::~Application() {

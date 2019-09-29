@@ -12,8 +12,10 @@ outputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Fugu/vendor/GLFW/include"
+IncludeDir["Glad"] = "Fugu/vendor/Glad/include"
 
 include "Fugu/vendor/GLFW"
+include "Fugu/vendor/Glad"
 
 project "Fugu"
 	location "Fugu"
@@ -36,12 +38,14 @@ project "Fugu"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "Fugu"
 		defines
 		{
 			"FG_PLATFORM_WINDOWS",
-			"FG_BUILD_DLL"
+			"FG_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
