@@ -34,6 +34,12 @@
     <ClInclude Include="src\Fugu\Events\MouseEvent.h">
       <Filter>Fugu\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Layer.h">
+      <Filter>Fugu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\LayerStack.h">
+      <Filter>Fugu</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Log.h">
       <Filter>Fugu</Filter>
     </ClInclude>
@@ -47,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
+      <Filter>Fugu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\LayerStack.cpp">
       <Filter>Fugu</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Log.cpp">

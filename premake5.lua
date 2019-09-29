@@ -63,14 +63,17 @@ project "Fugu"
 
 	filter "configurations:Debug"
 		defines "FG_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "FG_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 	
 	filter "configurations:Dist"
 		defines "FG_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"	
@@ -110,12 +113,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "FG_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "FG_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 	
 	filter "configurations:Dist"
 		defines "FG_DIST"
+		buildoptions "/MD"
 		optimize "On"
