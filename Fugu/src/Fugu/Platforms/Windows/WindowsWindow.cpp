@@ -39,9 +39,13 @@ namespace Fugu{
 			int success = glfwInit();
 			FG_CORE_ASSERT(success, "Could not initialize GLFW!");
 
+
 			s_GLFWInitialized = true;
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
+			//glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+			//glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+			//glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 			m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), NULL, NULL);
 			FG_CORE_ASSERT(m_Window, "Window could not be created!");
@@ -129,10 +133,12 @@ namespace Fugu{
 	void WindowsWindow::Shutdown() {
 		glfwDestroyWindow(m_Window);
 	}
+	
 	void WindowsWindow::OnUpdate() {
 		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
 	}
+	
 	void WindowsWindow::SetVsync(bool enable) {
 		if (enable)
 			glfwSwapInterval(1);
@@ -141,7 +147,13 @@ namespace Fugu{
 
 		m_Data.Vsync = enable;
 	}
+	
 	bool WindowsWindow::IsVsync() const {
 		return m_Data.Vsync;
 	}
+
+	void* WindowsWindow::GetNativeWindow() const {
+		return m_Window;
+	}
+
 }

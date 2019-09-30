@@ -36,6 +36,7 @@ namespace Fugu {
 		bool IsVsync() const override;
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 
+		void* GetNativeWindow() const override;
 	};
 
 }

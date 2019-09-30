@@ -6,16 +6,18 @@
 
 #include "glad/glad.h"
 
-#define BIND_EVENT_FC(x) std::bind(&Application::x, this, std::placeholders::_1)
-
 namespace Fugu {
 
+#define BIND_EVENT_FC(x) std::bind(&Application::x, this, std::placeholders::_1)
+
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application() {
+		FG_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FC(OnEvent));
-
-		unsigned int id;
-		glGenBuffers(1, &id);
 	}
 
 	Application::~Application() {
@@ -26,10 +28,11 @@ namespace Fugu {
 		while (m_Running) {
 			glClearColor(0, 1, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
-			m_Window->OnUpdate();
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+			
+			m_Window->OnUpdate();
 		}
 	}
 

@@ -8,11 +8,11 @@ public:
 	~ExampleLayer() {}
 
 	void OnUpdate() override {
-		FG_INFO("{0}::Update", m_DebugName);
+		FG_TRACE("{0}::Update", m_DebugName);
 	}
 
 	void OnEvent(Fugu::Event& e) override {
-		FG_TRACE("{0}", e);
+		FG_INFO("{0}", e);
 	}
 };
 
@@ -21,6 +21,7 @@ public:
 	SandboxApp() {
 	
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Fugu::ImGuiLayer());
 	}
 	~SandboxApp() {}
 };
