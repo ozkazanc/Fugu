@@ -4,6 +4,6 @@
 [submodule "glfw"]
 	path = Fugu/vendor/glfw
 	url = https://github.com/glfw/glfw
-[submodule "Fugu/vendor/imgui"]
+[submodule "imgui"]
 	path = Fugu/vendor/imgui
-	url = https://github.com/ozkazanc/imgui
+	url = https://github.com/ocornut/imgui
