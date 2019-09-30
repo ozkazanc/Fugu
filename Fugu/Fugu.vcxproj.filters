@@ -13,6 +13,9 @@
     <Filter Include="Fugu\Platforms">
       <UniqueIdentifier>{C343243D-AF11-1843-98A5-88698412F4A7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fugu\Platforms\GLFW">
+      <UniqueIdentifier>{E2D09E27-4E32-7C35-D79F-C2E74300B3F4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Fugu\Platforms\OpenGL">
       <UniqueIdentifier>{97B3DC9F-0320-989A-CC13-30F8383FBA02}</UniqueIdentifier>
     </Filter>
@@ -55,6 +58,9 @@
     <ClInclude Include="src\Fugu\Log.h">
       <Filter>Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.h">
+      <Filter>Fugu\Platforms\GLFW</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Fugu\Platforms\OpenGL</Filter>
     </ClInclude>
@@ -65,7 +71,6 @@
       <Filter>Fugu</Filter>
     </ClInclude>
     <ClInclude Include="src\fgpch.h" />
-    <ClInclude Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -80,6 +85,9 @@
     <ClCompile Include="src\Fugu\Log.cpp">
       <Filter>Fugu</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.cpp">
+      <Filter>Fugu\Platforms\GLFW</Filter>
+    </ClCompile>
     <ClCompile Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Fugu\Platforms\OpenGL</Filter>
     </ClCompile>
@@ -87,6 +95,5 @@
       <Filter>Fugu\Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\fgpch.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.cpp" />
   </ItemGroup>
 </Project>

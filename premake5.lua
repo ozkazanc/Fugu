@@ -15,11 +15,11 @@ IncludeDir["GLFW"] = "Fugu/vendor/GLFW/include"
 IncludeDir["Glad"] = "Fugu/vendor/Glad/include"
 IncludeDir["ImGui"] = "Fugu/vendor/imgui"
 
+startproject "Sandbox"
+
 include "Fugu/vendor/GLFW"
 include "Fugu/vendor/Glad"
 include "Fugu/vendor/imgui"
-
-startproject "Sandbox"
 
 project "Fugu"
 	location "Fugu"
