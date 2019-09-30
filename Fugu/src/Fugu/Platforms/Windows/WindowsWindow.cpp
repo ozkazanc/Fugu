@@ -59,7 +59,6 @@ namespace Fugu{
 			SetVsync(true);
 
 			glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
-
 				WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 				switch (action) {
 					case GLFW_PRESS: 
@@ -83,6 +82,12 @@ namespace Fugu{
 				}			
 			});
 			
+			glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode) {
+				WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent event(keycode);
+				data->EventCallback(event);
+			});
+
 			glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window) {
 				WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 				WindowCloseEvent event;
@@ -127,7 +132,6 @@ namespace Fugu{
 				MouseScrolledEvent event((float)xoffset, (float)yoffset);
 				data->EventCallback(event);	
 			});
-
 	}
 
 	void WindowsWindow::Shutdown() {
