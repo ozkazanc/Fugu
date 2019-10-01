@@ -8,11 +8,19 @@ public:
 	~ExampleLayer() {}
 
 	void OnUpdate() override {
-		//FG_TRACE("{0}::Update", m_DebugName);
+		if (Fugu::Input::IsKeyPressed(FG_KEY_TAB))
+			FG_INFO("Tab key is pressed (poll)!");
 	}
 
-	void OnEvent(Fugu::Event& e) override {
-		FG_INFO("{0}", e);
+	void OnEvent(Fugu::Event& event) override {
+		if (event.GetEventType() == Fugu::EventType::KeyPressed) {
+			Fugu::KeyPressedEvent& e = (Fugu::KeyPressedEvent&)event;
+			
+			if (e.GetKeyCode() == FG_KEY_TAB)
+				FG_INFO("Tab key is pressed(event)!");
+			
+			FG_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

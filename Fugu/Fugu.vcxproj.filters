@@ -73,6 +73,8 @@
     <ClInclude Include="src\fgpch.h" />
     <ClInclude Include="src\Fugu\Input.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Fugu\KeyCodes.h" />
+    <ClInclude Include="src\Fugu\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
