@@ -158,11 +158,13 @@
     <ClInclude Include="src\Fugu\Events\KeyEvent.h" />
     <ClInclude Include="src\Fugu\Events\MouseEvent.h" />
     <ClInclude Include="src\Fugu\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Fugu\Input.h" />
     <ClInclude Include="src\Fugu\Layer.h" />
     <ClInclude Include="src\Fugu\LayerStack.h" />
     <ClInclude Include="src\Fugu\Log.h" />
     <ClInclude Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.h" />
     <ClInclude Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Fugu\Window.h" />
     <ClInclude Include="src\fgpch.h" />
@@ -174,6 +176,7 @@
     <ClCompile Include="src\Fugu\Log.cpp" />
     <ClCompile Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.cpp" />
     <ClCompile Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\fgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

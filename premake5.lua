@@ -17,9 +17,12 @@ IncludeDir["ImGui"] = "Fugu/vendor/imgui"
 
 startproject "Sandbox"
 
-include "Fugu/vendor/GLFW"
-include "Fugu/vendor/Glad"
-include "Fugu/vendor/imgui"
+group "Dependencies"
+	include "Fugu/vendor/GLFW"
+	include "Fugu/vendor/Glad"
+	include "Fugu/vendor/imgui"
+
+group ""
 
 project "Fugu"
 	location "Fugu"
@@ -69,7 +72,7 @@ project "Fugu"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputDir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputDir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"

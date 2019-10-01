@@ -8,7 +8,7 @@ public:
 	~ExampleLayer() {}
 
 	void OnUpdate() override {
-		FG_TRACE("{0}::Update", m_DebugName);
+		//FG_TRACE("{0}::Update", m_DebugName);
 	}
 
 	void OnEvent(Fugu::Event& e) override {

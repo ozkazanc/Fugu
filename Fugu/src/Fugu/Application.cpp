@@ -6,6 +6,8 @@
 
 #include "glad/glad.h"
 
+#include "Fugu/Platforms/Windows/WindowsInput.h"
+
 namespace Fugu {
 
 	Application* Application::s_Instance = nullptr;
@@ -31,6 +33,8 @@ namespace Fugu {
 				layer->OnUpdate();
 			
 			m_Window->OnUpdate();
+
+			FG_CORE_TRACE("Mouse Position: {0}, {1}", Input::GetMouseX(), Input::GetMouseY());
 		}
 	}
 

@@ -71,6 +71,8 @@
       <Filter>Fugu</Filter>
     </ClInclude>
     <ClInclude Include="src\fgpch.h" />
+    <ClInclude Include="src\Fugu\Input.h" />
+    <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -95,5 +97,6 @@
       <Filter>Fugu\Platforms\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\fgpch.cpp" />
+    <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
