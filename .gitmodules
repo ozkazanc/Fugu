@@ -7,6 +7,3 @@
 [submodule "Fugu/vendor/glm"]
 	path = Fugu/vendor/glm
 	url = https://github.com/g-truc/glm
-[submodule "Fugu/vendor/imgui"]
-	path = Fugu/vendor/imgui
-	url = https://github.com/ozkazanc/imgui
