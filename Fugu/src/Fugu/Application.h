@@ -6,6 +6,8 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "Fugu/ImGui/ImGuiLayer.h"
+
 namespace Fugu {
 
 	class FUGU_API Application {
@@ -16,6 +18,7 @@ namespace Fugu {
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		ImGuiLayer* m_ImGuiLayer;
 
 		bool OnWindowClose(WindowCloseEvent& e);
 

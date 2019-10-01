@@ -29,7 +29,6 @@ public:
 	SandboxApp() {
 	
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Fugu::ImGuiLayer());
 	}
 	~SandboxApp() {}
 };

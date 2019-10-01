@@ -5,7 +5,6 @@
 namespace Fugu {
 
 	LayerStack::LayerStack() {
-		m_InsertLayer = m_Layers.begin();
 	}
 
 	LayerStack::~LayerStack() {
@@ -14,8 +13,8 @@ namespace Fugu {
 	}
 
 	void LayerStack::PushLayer(Layer* layer) {
-		m_InsertLayer = m_Layers.emplace(m_InsertLayer, layer);
-		m_InsertLayer++;
+		m_Layers.emplace(m_Layers.begin() + m_LayerInsertIndex, layer);
+		m_LayerInsertIndex++;
 		layer->OnAttach();
 	}
 
@@ -29,7 +28,7 @@ namespace Fugu {
 		if (it != m_Layers.end()) {
 			layer->OnDetach();
 			m_Layers.erase(it);
-			m_InsertLayer--;
+			m_LayerInsertIndex--;
 		}
 	}
 
@@ -40,6 +39,4 @@ namespace Fugu {
 			m_Layers.erase(it);
 		}
 	}
-
-
 }

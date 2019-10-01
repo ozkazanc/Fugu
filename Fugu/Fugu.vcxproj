@@ -164,8 +164,6 @@
     <ClInclude Include="src\Fugu\LayerStack.h" />
     <ClInclude Include="src\Fugu\Log.h" />
     <ClInclude Include="src\Fugu\MouseButtonCodes.h" />
-    <ClInclude Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.h" />
-    <ClInclude Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Fugu\Window.h" />
@@ -541,11 +539,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp" />
+    <ClCompile Include="src\Fugu\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Fugu\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Fugu\LayerStack.cpp" />
     <ClCompile Include="src\Fugu\Log.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\GLFW\ImGuiGlfwRenderer.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\fgpch.cpp">

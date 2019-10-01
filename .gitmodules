@@ -10,3 +10,4 @@
 [submodule "Fugu/vendor/imgui"]
 	path = Fugu/vendor/imgui
 	url = https://github.com/ozkazanc/imgui
+	branch = docking
