@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef FG_PLATFORM_WINDOWS
+#if FG_DYNAMIC_LINK
 	#ifdef FG_BUILD_DLL
 		#define FUGU_API __declspec(dllexport)
 	#else
 		#define FUGU_API __declspec(dllimport)
 	#endif
+#else
+	#define FUGU_API 
+#endif
 #else
 	#error Fugu only supports Windows!
 #endif

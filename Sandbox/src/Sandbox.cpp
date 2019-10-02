@@ -1,5 +1,5 @@
 #include "Fugu.h"
-
+#include "../../Fugu/vendor/imgui/imgui.h"
 class ExampleLayer : public Fugu::Layer {
 public:
 	ExampleLayer()
@@ -11,7 +11,11 @@ public:
 		if (Fugu::Input::IsKeyPressed(FG_KEY_TAB))
 			FG_INFO("Tab key is pressed (poll)!");
 	}
-
+	void OnImGuiRender() override
+	{
+		//static bool show = true;
+		//ImGui::ShowDemoWindow(&show);
+	}
 	void OnEvent(Fugu::Event& event) override {
 		if (event.GetEventType() == Fugu::EventType::KeyPressed) {
 			Fugu::KeyPressedEvent& e = (Fugu::KeyPressedEvent&)event;
