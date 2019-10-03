@@ -1,14 +1,15 @@
 #pragma once
-
 #include "Fugu/Window.h"
+#include "Fugu/Renderer/RendererContext.h"
 
-#include <GLFW/glfw3.h>
+#include "GLFW/glfw3.h"
 
 namespace Fugu {
 
 	class WindowsWindow : public Window {
 	private:
 		GLFWwindow* m_Window;
+		RendererContext* m_Context;
 
 		struct WindowData {
 			std::string Title;

@@ -155,8 +155,10 @@
     <ClInclude Include="src\Fugu\LayerStack.h" />
     <ClInclude Include="src\Fugu\Log.h" />
     <ClInclude Include="src\Fugu\MouseButtonCodes.h" />
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Fugu\Renderer\RendererContext.h" />
     <ClInclude Include="src\Fugu\Window.h" />
     <ClInclude Include="src\fgpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -534,6 +536,7 @@
     <ClCompile Include="src\Fugu\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Fugu\LayerStack.cpp" />
     <ClCompile Include="src\Fugu\Log.cpp" />
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\fgpch.cpp">
@@ -554,4 +557,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 

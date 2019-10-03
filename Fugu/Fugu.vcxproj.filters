@@ -16,8 +16,14 @@
     <Filter Include="src\Fugu\Platforms">
       <UniqueIdentifier>{FA63089B-E647-C9F0-4FA8-C3433BABB372}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Fugu\Platforms\OpenGL">
+      <UniqueIdentifier>{EE8F01F2-5A52-357C-A302-C4080F040E5A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Fugu\Platforms\Windows">
       <UniqueIdentifier>{34684F8A-2078-FB5A-8931-60797560EAF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Fugu\Renderer">
+      <UniqueIdentifier>{F99513EF-65AC-1185-AE23-9DA61A79E20C}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
@@ -87,11 +93,17 @@
     <ClInclude Include="src\Fugu\MouseButtonCodes.h">
       <Filter>src\Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLContext.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h">
       <Filter>src\Fugu\Platforms\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h">
       <Filter>src\Fugu\Platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\RendererContext.h">
+      <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Window.h">
       <Filter>src\Fugu</Filter>
@@ -1219,6 +1231,9 @@
     </ClCompile>
     <ClCompile Include="src\Fugu\Log.cpp">
       <Filter>src\Fugu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp">
       <Filter>src\Fugu\Platforms\Windows</Filter>
