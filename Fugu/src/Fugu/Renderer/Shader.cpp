@@ -86,6 +86,8 @@ namespace Fugu {
 		// Always detach shaders after a successful link.
 		glDetachShader(program, vertex);
 		glDetachShader(program, fragment);
+		glDeleteShader(vertex);
+		glDeleteShader(fragment);
 	}
 
 	Shader::~Shader() {

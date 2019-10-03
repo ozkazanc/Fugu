@@ -1216,6 +1216,9 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\Shader.h" />
+    <ClInclude Include="src\Fugu\Renderer\Buffer.h" />
+    <ClInclude Include="src\Fugu\Renderer\Renderer.h" />
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -1246,5 +1249,8 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Fugu\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Fugu\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.cpp" />
   </ItemGroup>
 </Project>

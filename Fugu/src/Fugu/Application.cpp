@@ -29,9 +29,7 @@ namespace Fugu {
 			 0.0,  0.5f, 0.0f,
 		};
 
-		glGenBuffers(1, &m_VertexBuffer);
-		glBindBuffer(GL_ARRAY_BUFFER, m_VertexBuffer);
-		glBufferData(GL_ARRAY_BUFFER, 3 * 3 * sizeof(float), vertices, GL_STATIC_DRAW);
+		m_VertexBuffer.reset(VertexBuffer::Create(vertices, 3 * 3 * sizeof(float)));
 
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 3 , GL_FLOAT, false, 3 * sizeof(float), (void*)0);
@@ -40,9 +38,7 @@ namespace Fugu {
 			0, 1, 2
 		};
 
-		glGenBuffers(1, &m_IndexBuffer);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IndexBuffer);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, 3 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+		m_IndexBuffer.reset(IndexBuffer::Create(indices, 3));
 
 		const std::string vertexSrc = R"(
 			#version 330 core
@@ -79,9 +75,9 @@ namespace Fugu {
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			glBindVertexArray(m_VertexArray);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IndexBuffer);
+			m_IndexBuffer->Bind();
 			m_Shader->Bind();
-			glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+			glDrawElements(GL_TRIANGLES, m_IndexBuffer->GetCount(), GL_UNSIGNED_INT, nullptr);
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();

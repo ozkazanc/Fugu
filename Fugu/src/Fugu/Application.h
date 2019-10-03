@@ -8,6 +8,7 @@
 
 #include "Fugu/ImGui/ImGuiLayer.h"
 
+#include "Fugu/Renderer/Buffer.h"
 #include "Fugu/Renderer/Shader.h"
 
 namespace Fugu {
@@ -22,7 +23,9 @@ namespace Fugu {
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
 
-		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		unsigned int m_VertexArray;
+		std::unique_ptr<VertexBuffer> m_VertexBuffer;
+		std::unique_ptr<IndexBuffer> m_IndexBuffer;
 		std::unique_ptr<Shader> m_Shader;
 
 		bool OnWindowClose(WindowCloseEvent& e);
