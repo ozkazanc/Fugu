@@ -159,6 +159,7 @@
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h" />
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Fugu\Renderer\RendererContext.h" />
+    <ClInclude Include="src\Fugu\Renderer\Shader.h" />
     <ClInclude Include="src\Fugu\Window.h" />
     <ClInclude Include="src\fgpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -542,6 +543,7 @@
     <ClCompile Include="src\fgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
@@ -557,4 +559,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>

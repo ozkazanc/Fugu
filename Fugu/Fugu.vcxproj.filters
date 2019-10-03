@@ -1215,6 +1215,7 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -1244,5 +1245,6 @@
     <ClCompile Include="src\fgpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>
