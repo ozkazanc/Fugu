@@ -20,6 +20,8 @@ namespace Fugu {
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
 
+		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+
 		bool OnWindowClose(WindowCloseEvent& e);
 
 	public:

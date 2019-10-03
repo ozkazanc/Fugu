@@ -1,8 +1,8 @@
 #include "fgpch.h"
 #include "OpenGLContext.h"
 
-#include "glad/glad.h"
 #include "GLFW/glfw3.h"
+#include "glad/glad.h"
 
 namespace Fugu {
 
@@ -17,15 +17,14 @@ namespace Fugu {
 
 		int success = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		FG_CORE_ASSERT(success, "Failed to initialize Glad!");
+
+		FG_CORE_INFO("OpenGL Info:");
+		FG_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
+		FG_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
+		FG_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
 	}
 
 	void OpenGLContext::SwapBuffers() {
-		glBegin(GL_TRIANGLES);
-		glVertex2f(-0.5f, -0.5f);
-		glVertex2f(0.5f, -0.5f);
-		glVertex2f(0.0f, 0.5f);
-		glEnd();
-
 		glfwSwapBuffers(m_WindowHandle);
 	}
 }
