@@ -93,7 +93,13 @@
     <ClInclude Include="src\Fugu\MouseButtonCodes.h">
       <Filter>src\Fugu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLContext.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsInput.h">
@@ -102,7 +108,19 @@
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h">
       <Filter>src\Fugu\Platforms\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Buffer.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Renderer.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\RendererContext.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Shader.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\VertexArray.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Window.h">
@@ -1215,10 +1233,6 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Fugu\Renderer\Shader.h" />
-    <ClInclude Include="src\Fugu\Renderer\Buffer.h" />
-    <ClInclude Include="src\Fugu\Renderer\Renderer.h" />
-    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -1236,7 +1250,13 @@
     <ClCompile Include="src\Fugu\Log.cpp">
       <Filter>src\Fugu</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsInput.cpp">
@@ -1245,12 +1265,20 @@
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsWindow.cpp">
       <Filter>src\Fugu\Platforms\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Buffer.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Renderer.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Shader.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\VertexArray.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\fgpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Fugu\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLBuffer.cpp" />
   </ItemGroup>
 </Project>

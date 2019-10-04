@@ -9,6 +9,7 @@
 #include "Fugu/ImGui/ImGuiLayer.h"
 
 #include "Fugu/Renderer/Buffer.h"
+#include "Fugu/Renderer/VertexArray.h"
 #include "Fugu/Renderer/Shader.h"
 
 namespace Fugu {
@@ -23,10 +24,11 @@ namespace Fugu {
 		LayerStack m_LayerStack;
 		ImGuiLayer* m_ImGuiLayer;
 
-		unsigned int m_VertexArray;
-		std::unique_ptr<VertexBuffer> m_VertexBuffer;
-		std::unique_ptr<IndexBuffer> m_IndexBuffer;
-		std::unique_ptr<Shader> m_Shader;
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+
+		std::shared_ptr<Shader> m_BlueShader;
+		std::shared_ptr<VertexArray> m_SquareVA;
 
 		bool OnWindowClose(WindowCloseEvent& e);
 
@@ -38,9 +40,9 @@ namespace Fugu {
 		inline Window& GetWindow() { return *m_Window; }
 
 		void Run();
-		
+
 		virtual void OnEvent(Event& e);
-		
+
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* overlay);
 
