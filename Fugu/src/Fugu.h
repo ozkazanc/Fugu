@@ -10,6 +10,3 @@
 #include "Fugu/MouseButtonCodes.h"
 
 #include "Fugu/ImGui/ImGuiLayer.h"
-//--------Entry Point --------------------------------------------
-#include "Fugu/EntryPoint.h"
-//----------------------------------------------------------------

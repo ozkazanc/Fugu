@@ -135,12 +135,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ExampleLayer.cpp" />
     <ClCompile Include="src\Sandbox.cpp" />
+    <ClCompile Include="src\Tests\ClearColor.cpp" />
+    <ClCompile Include="src\Tests\Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fugu\Fugu.vcxproj">
       <Project>{7C71857C-68A8-860D-1195-6C10FDAA020F}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ExampleLayer.h" />
+    <ClInclude Include="src\Tests\ClearColor.h" />
+    <ClInclude Include="src\Tests\Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
