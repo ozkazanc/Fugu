@@ -78,7 +78,7 @@ ExampleLayer::ExampleLayer()
 			}
 		)";
 
-	m_Shader.reset(new Fugu::Shader(vertexSrc, fragmentSrc));
+	m_Shader.reset(Fugu::Shader::Create(vertexSrc, fragmentSrc));
 
 	std::string flatColorrVertexSrc = R"(
 			#version 330 core
@@ -104,7 +104,7 @@ ExampleLayer::ExampleLayer()
 			}
 		)";
 
-	m_FlatColorShader.reset(new Fugu::Shader(flatColorrVertexSrc, flatColorFragmentSrc));
+	m_FlatColorShader.reset(Fugu::Shader::Create(flatColorrVertexSrc, flatColorFragmentSrc));
 }
 
 void ExampleLayer::OnAttach() {}
