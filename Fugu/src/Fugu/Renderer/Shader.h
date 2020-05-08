@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <glm/glm.hpp>
 
 namespace Fugu {
 
@@ -13,5 +14,7 @@ namespace Fugu {
 
 		void Bind() const;
 		void Unbind() const;
+
+		void SetFloat3(const std::string& name, const glm::vec3& value);
 	};
 }
