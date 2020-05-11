@@ -2,9 +2,10 @@
 #include "Application.h"
 
 #include "Fugu/Log.h"
-#include "Fugu/Events/ApplicationEvent.h"
 
 #include "Fugu/Renderer/Renderer.h"
+
+#include <glfw/glfw3.h>
 
 namespace Fugu {
 
@@ -27,13 +28,19 @@ namespace Fugu {
 
 	void Application::Run() {
 		while (m_Running) {
-			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate();
+			float time = (float)glfwGetTime();
+			Timestep timestep = time - m_LastFrameTime;
+			m_LastFrameTime = time;
 
-			m_ImGuiLayer->Begin();
-			for (Layer* layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
+			if (!m_Minimized) {
+				for (Layer* layer : m_LayerStack)
+					layer->OnUpdate(timestep);
+
+				m_ImGuiLayer->Begin();
+				for (Layer* layer : m_LayerStack)
+					layer->OnImGuiRender();
+				m_ImGuiLayer->End();
+			}
 
 			m_Window->OnUpdate();
 		}
@@ -44,9 +51,24 @@ namespace Fugu {
 		return true;
 	}
 
+	bool Application::OnWindowResize(WindowResizeEvent& e)
+	{
+		if (e.GetWidth() == 0 || e.GetHeight() == 0)
+		{
+			m_Minimized = true;
+			return false;
+		}
+
+		m_Minimized = false;
+		Renderer::OnWindowResize(e.GetWidth(), e.GetHeight());
+
+		return false;
+	}
+
 	void Application::OnEvent(Event& e) {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FC(Application::OnWindowClose));
+		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FC(Application::OnWindowResize));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ) {
 			(*--it)->OnEvent(e);

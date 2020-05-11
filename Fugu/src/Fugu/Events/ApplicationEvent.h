@@ -3,7 +3,7 @@
 #include "Event.h"
 
 namespace Fugu {
-	class FUGU_API WindowResizeEvent : public Event {
+	class WindowResizeEvent : public Event {
 	private:
 		unsigned int m_Width;
 		unsigned int m_Height;
@@ -25,7 +25,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 	};
 
-	class FUGU_API WindowCloseEvent : public Event {
+	class WindowCloseEvent : public Event {
 	public:
 		WindowCloseEvent() {}
 
@@ -33,7 +33,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 	};
 
-	class FUGU_API AppTickEvent : public Event {
+	class AppTickEvent : public Event {
 	public:
 		AppTickEvent() {}
 
@@ -41,7 +41,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 	};
 
-	class FUGU_API AppUpdateEvent : public Event {
+	class AppUpdateEvent : public Event {
 	public:
 		AppUpdateEvent() {}
 
@@ -49,7 +49,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 	};
 
-	class FUGU_API AppRenderEvent : public Event {
+	class AppRenderEvent : public Event {
 	public:
 		AppRenderEvent() {}
 

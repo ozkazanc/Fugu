@@ -11,7 +11,7 @@ public:
 
 	virtual ~Test() {}
 		
-	virtual void OnUpdate() override {}
+	virtual void OnUpdate(Fugu::Timestep ts) override {}
 	virtual void OnEvent(Fugu::Event& e) override {}
 	virtual void OnImGuiRender() override {}
 
@@ -38,5 +38,5 @@ public:
 	virtual void OnAttach() override;
 	virtual void OnImGuiRender() override;
 	virtual void OnEvent(Fugu::Event& event) override;
-	virtual void OnUpdate() override;
+	virtual void OnUpdate(Fugu::Timestep ts) override;
 };

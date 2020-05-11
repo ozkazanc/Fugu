@@ -19,7 +19,7 @@ namespace Fugu {
 			m_Height(height) {}
 	};
 
-	class FUGU_API Window {
+	class Window {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 

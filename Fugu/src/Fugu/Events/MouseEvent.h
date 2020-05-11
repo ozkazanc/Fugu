@@ -4,7 +4,7 @@
 
 namespace Fugu {
 
-	class FUGU_API MouseMovedEvent : public Event {
+	class MouseMovedEvent : public Event {
 
 	private:
 		float m_MouseX;
@@ -26,7 +26,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
 	};
 
-	class FUGU_API MouseScrolledEvent : public Event {
+	class MouseScrolledEvent : public Event {
 	private:
 		float m_XOffset;
 		float m_YOffset;
@@ -48,7 +48,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
 	};
 
-	class FUGU_API MouseButtonEvent : public Event {
+	class MouseButtonEvent : public Event {
 	protected:
 		MouseButtonEvent(int button)
 			:m_Button(button) {}
@@ -61,7 +61,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
 	};
 
-	class FUGU_API MouseButtonPressedEvent : public MouseButtonEvent {
+	class MouseButtonPressedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonPressedEvent(int button)
 			:MouseButtonEvent(button) {}
@@ -75,7 +75,7 @@ namespace Fugu {
 		EVENT_CLASS_TYPE(MouseButtonPressed);
 	};
 
-	class FUGU_API MouseButtonReleasedEvent : public MouseButtonEvent {
+	class MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
 		MouseButtonReleasedEvent(int button)
 			:MouseButtonEvent(button) {}

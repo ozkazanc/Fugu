@@ -55,13 +55,16 @@ ExampleLayer::ExampleLayer()
 			
 			layout(location = 0) in vec3 a_Position;
 			layout(location = 1) in vec4 a_Color;
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
 			out vec3 v_Position;
 			out vec4 v_Color;
+			
 			void main()
 			{
 				v_Position = a_Position;
 				v_Color = a_Color;
-				gl_Position = vec4(a_Position, 1.0);	
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -71,6 +74,7 @@ ExampleLayer::ExampleLayer()
 			layout(location = 0) out vec4 color;
 			in vec3 v_Position;
 			in vec4 v_Color;
+			
 			void main()
 			{
 				color = vec4(v_Position * 0.5 + 0.5, 1.0);
@@ -84,11 +88,14 @@ ExampleLayer::ExampleLayer()
 			#version 330 core
 			
 			layout(location = 0) in vec3 a_Position;
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
 			out vec3 v_Position;
+			
 			void main()
 			{
 				v_Position = a_Position;
-				gl_Position = vec4(a_Position, 1.0);	
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -98,6 +105,7 @@ ExampleLayer::ExampleLayer()
 			layout(location = 0) out vec4 color;
 			in vec3 v_Position;
 			uniform vec3 u_Color;
+			
 			void main()
 			{
 				color = vec4(u_Color, 1.0);
@@ -105,24 +113,29 @@ ExampleLayer::ExampleLayer()
 		)";
 
 	m_FlatColorShader.reset(Fugu::Shader::Create(flatColorrVertexSrc, flatColorFragmentSrc));
+
+	float width = (float)Fugu::Application::GetInstance().GetWindow().GetWidth();
+	float height = (float)Fugu::Application::GetInstance().GetWindow().GetHeight();
+	m_OrthoCamera.reset(new Fugu::OrthographicCamera(width / height));
+	//m_OrthoCamera.reset(new Fugu::PerspectiveCamera(width / height));
 }
 
 void ExampleLayer::OnAttach() {}
 void ExampleLayer::OnDetach() {}
 
-void ExampleLayer::OnUpdate() {
+void ExampleLayer::OnUpdate(Fugu::Timestep ts) {
+	m_OrthoCamera->OnUpdate(ts);
 
 	Fugu::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
 	Fugu::RenderCommand::Clear();
 
-	Fugu::Renderer::BeginScene();
+	Fugu::Renderer::BeginScene(*m_OrthoCamera);
 
 	m_FlatColorShader->Bind();
 	m_FlatColorShader->SetFloat3("u_Color", m_SquareColor);
-	Fugu::Renderer::Submit(m_SquareVA);
+	Fugu::Renderer::Submit(m_FlatColorShader, m_SquareVA, glm::mat4(1.0f));
 
-	m_Shader->Bind();
-	Fugu::Renderer::Submit(m_VertexArray);
+	Fugu::Renderer::Submit(m_Shader, m_VertexArray, glm::mat4(1.0f));
 
 	Fugu::Renderer::EndScene();
 }
@@ -134,6 +147,8 @@ void ExampleLayer::OnImGuiRender() {
 }
 
 void ExampleLayer::OnEvent(Fugu::Event& event) {
+	m_OrthoCamera->OnEvent(event);
+
 	if (event.GetEventType() == Fugu::EventType::KeyPressed) {
 		Fugu::KeyPressedEvent& e = (Fugu::KeyPressedEvent&)event;
 

@@ -2,7 +2,7 @@
 #include "ClearColor.h"
 
 void TestMenu::OnAttach() {
-	RegisterTest<ColorClearTest>("Clear Color");
+	RegisterTest<ClearColorTest>("Clear Color");
 }
 
 void TestMenu::OnImGuiRender() {
@@ -50,9 +50,9 @@ void TestMenu::OnEvent(Fugu::Event& event) {
 	}
 }
 
-void TestMenu::OnUpdate() {
+void TestMenu::OnUpdate(Fugu::Timestep ts) {
 	if (m_CurrentTest) {
-		m_CurrentTest->OnUpdate();
+		m_CurrentTest->OnUpdate(ts);
 	}
 	else {
 		if (Fugu::Input::IsKeyPressed(FG_KEY_TAB))

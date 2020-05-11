@@ -1237,6 +1237,9 @@
     <ClInclude Include="src\Fugu\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Fugu\Renderer\Camera.h" />
+    <ClInclude Include="src\Fugu\Renderer\CameraController.h" />
+    <ClInclude Include="src\Fugu\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -1288,5 +1291,7 @@
     <ClCompile Include="src\Fugu\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Fugu\Renderer\Camera.cpp" />
+    <ClCompile Include="src\Fugu\Renderer\CameraController.cpp" />
   </ItemGroup>
 </Project>

@@ -1,14 +1,14 @@
 #pragma once
 #include "Test.h"
 
-class ColorClearTest : public Test {
+class ClearColorTest : public Test {
 private:
 	float m_ClearColor[4];
 
 public:
-	ColorClearTest(const std::string& name = "Clear Color Test");
-	~ColorClearTest();
+	ClearColorTest(const std::string& name = "Clear Color Test");
+	~ClearColorTest();
 
-	void OnUpdate() override;
+	void OnUpdate(Fugu::Timestep ts) override;
 	void OnImGuiRender() override;
 };

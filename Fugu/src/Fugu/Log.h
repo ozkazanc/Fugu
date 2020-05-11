@@ -6,7 +6,7 @@
 
 namespace Fugu {
 
-	class FUGU_API Log {
+	class Log {
 	public:
 		static void Init();
 

@@ -6,6 +6,7 @@
 #include "Fugu/Application.h"
 #include "Fugu/Layer.h"
 #include "Fugu/Log.h"
+#include "Fugu/Timestep.h"
 
 #include "Fugu/Input.h"
 #include "Fugu/KeyCodes.h"
@@ -20,3 +21,5 @@
 #include "Fugu/Renderer/Buffer.h"
 #include "Fugu/Renderer/Shader.h"
 #include "Fugu/Renderer/VertexArray.h"
+
+#include "Fugu/Renderer/Camera.h"

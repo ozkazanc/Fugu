@@ -14,6 +14,7 @@ namespace Fugu {
 		virtual void Unbind() const = 0;
 
 		virtual void SetFloat3(const std::string& name, const glm::vec3& value) = 0;
+		virtual void SetMat4(const std::string& name, const glm::mat4& value) = 0;
 
 	};
 }

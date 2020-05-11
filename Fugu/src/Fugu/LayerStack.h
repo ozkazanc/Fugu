@@ -7,7 +7,7 @@
 
 namespace Fugu {
 
-	class FUGU_API LayerStack {
+	class LayerStack {
 	private:
 		std::vector<Layer*> m_Layers;
 		unsigned int m_LayerInsertIndex = 0;

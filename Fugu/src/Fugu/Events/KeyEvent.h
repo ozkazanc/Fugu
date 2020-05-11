@@ -4,7 +4,7 @@
 
 namespace Fugu {
 
-	class FUGU_API KeyEvent : public Event {
+	class KeyEvent : public Event {
 	protected:
 		KeyEvent(int keyCode)
 			:m_KeyCode(keyCode) {}
@@ -17,7 +17,7 @@ namespace Fugu {
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput);
 	};
 
-	class FUGU_API KeyPressedEvent : public KeyEvent {
+	class KeyPressedEvent : public KeyEvent {
 	private:
 		int m_RepeatCount;
 	
@@ -36,7 +36,7 @@ namespace Fugu {
 		EVENT_CLASS_TYPE(KeyPressed);
 	};
 
-	class FUGU_API KeyReleasedEvent : public KeyEvent {
+	class KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(int keyCode)
 			:KeyEvent(keyCode) {}
@@ -50,7 +50,7 @@ namespace Fugu {
 		EVENT_CLASS_TYPE(KeyReleased);
 	};
 
-	class FUGU_API KeyTypedEvent : public KeyEvent {
+	class KeyTypedEvent : public KeyEvent {
 	public:
 		KeyTypedEvent(int keyCode)
 			:KeyEvent(keyCode) {}

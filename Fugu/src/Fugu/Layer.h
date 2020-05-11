@@ -1,11 +1,12 @@
 #pragma once
 
 #include "Core.h"
+#include "Timestep.h"
 #include "Events/Event.h"
 
 namespace Fugu {
 
-	class FUGU_API Layer {
+	class Layer {
 
 	protected:
 		const std::string m_DebugName;
@@ -18,7 +19,7 @@ namespace Fugu {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& e) {}
 

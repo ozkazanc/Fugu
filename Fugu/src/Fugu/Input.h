@@ -4,7 +4,7 @@
 
 namespace Fugu {
 
-	class FUGU_API Input {
+	class Input {
 	private:
 		static Input* s_Instance;
 
