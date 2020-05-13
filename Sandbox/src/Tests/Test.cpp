@@ -1,8 +1,10 @@
 #include "Test.h"
 #include "ClearColor.h"
+#include "Texture2DTest.h"
 
 void TestMenu::OnAttach() {
 	RegisterTest<ClearColorTest>("Clear Color");
+	RegisterTest<Texture2DTest>("Texture 2D");
 }
 
 void TestMenu::OnImGuiRender() {
@@ -55,6 +57,9 @@ void TestMenu::OnUpdate(Fugu::Timestep ts) {
 		m_CurrentTest->OnUpdate(ts);
 	}
 	else {
+		Fugu::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
+		Fugu::RenderCommand::Clear();
+
 		if (Fugu::Input::IsKeyPressed(FG_KEY_TAB))
 			FG_INFO("Tab key is pressed (poll)!");
 	}

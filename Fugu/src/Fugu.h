@@ -21,5 +21,6 @@
 #include "Fugu/Renderer/Buffer.h"
 #include "Fugu/Renderer/Shader.h"
 #include "Fugu/Renderer/VertexArray.h"
+#include "Fugu/Renderer/Texture.h"
 
 #include "Fugu/Renderer/Camera.h"

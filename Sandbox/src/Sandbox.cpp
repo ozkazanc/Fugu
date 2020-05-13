@@ -10,8 +10,8 @@ class SandboxApp : public Fugu::Application {
 public:
 	SandboxApp() {
 	
-		PushLayer(new ExampleLayer());
-		//PushLayer(new TestMenu());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new TestMenu());
 	}
 	~SandboxApp() {}
 };

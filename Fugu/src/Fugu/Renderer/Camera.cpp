@@ -137,16 +137,29 @@ namespace Fugu {
 	OrthographicCamera::OrthographicCamera(float aspectRatio)
 	{
 		m_AspectRatio = aspectRatio;
+		m_Width = aspectRatio;
+		m_Height = 1.0f;
+	}
+
+	OrthographicCamera::OrthographicCamera(uint32_t width, uint32_t height)
+		:m_Width((float)width),
+		m_Height((float)height)
+	{
+		m_AspectRatio = static_cast<float>(width) / static_cast<float>(height);
 	}
 
 	OrthographicCamera::OrthographicCamera(float aspectRatio, const glm::vec3& position, const glm::vec3& up) 
 		:Camera(position, up)
 	{
 		m_AspectRatio = aspectRatio;
+		m_Width = aspectRatio;
+		m_Height = 1.0f;
 	}
 
 	glm::mat4 OrthographicCamera::GetProjectionMatrix() const {
-		return glm::ortho(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel, 0.1f, 100.0f);
+		return glm::ortho(-m_Width * m_ZoomLevel / 2.0f, m_Width * m_ZoomLevel / 2.0f, 
+			-m_Height * m_ZoomLevel / 2.0f, m_Height * m_ZoomLevel / 2.0f,
+			0.1f, 100.0f);
 	}
 
 

@@ -13,6 +13,8 @@ void ClearColorTest::OnUpdate(Fugu::Timestep ts) {
 	Fugu::RenderCommand::Clear();
 }
 
+void ClearColorTest::OnEvent(Fugu::Event& event) {}
+
 void ClearColorTest::OnImGuiRender() {
 	ImGui::Begin("Background Color (TAB to return to Test Menu.)");
 	ImGui::ColorEdit4("Clear Color", m_ClearColor);

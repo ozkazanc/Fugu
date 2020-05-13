@@ -58,9 +58,14 @@ namespace Fugu {
 	class OrthographicCamera : public Camera {
 	public:
 		OrthographicCamera(float aspectRatio);
+		OrthographicCamera(uint32_t width, uint32_t height);
 		OrthographicCamera(float aspectRatio, const glm::vec3& position, const glm::vec3& up);
 
 		virtual glm::mat4 GetProjectionMatrix() const override;
+		void SetWidthHeight(float width, float height) { m_Width = width; m_Height = height; }
+	private:
+		float m_Width = 1;
+		float m_Height = 1;
 	};
 
 	class PerspectiveCamera : public Camera {

@@ -10,5 +10,6 @@ public:
 	~ClearColorTest();
 
 	void OnUpdate(Fugu::Timestep ts) override;
+	void OnEvent(Fugu::Event& event) override;
 	void OnImGuiRender() override;
 };

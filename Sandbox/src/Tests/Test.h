@@ -3,17 +3,17 @@
 #include "Fugu.h"
 #include "../../Fugu/vendor/imgui/imgui.h"
 
-class Test : public Fugu::Layer {
+class Test {
 public:
 	Test(const std::string& name = "Test")
-		:m_DebugName(name), 
-		Layer(name) {}
+		:m_DebugName(name)
+	{}
 
-	virtual ~Test() {}
+	virtual ~Test() = default;
 		
-	virtual void OnUpdate(Fugu::Timestep ts) override {}
-	virtual void OnEvent(Fugu::Event& e) override {}
-	virtual void OnImGuiRender() override {}
+	virtual void OnUpdate(Fugu::Timestep ts) = 0;
+	virtual void OnEvent(Fugu::Event& e) = 0;
+	virtual void OnImGuiRender() = 0;
 
 protected:
 	const std::string m_DebugName;

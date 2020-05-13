@@ -46,6 +46,9 @@
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\stb_image">
+      <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fugu.h">
@@ -99,6 +102,15 @@
     <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLContext.h">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLShader.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLTexture.h">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClInclude>
@@ -111,7 +123,19 @@
     <ClInclude Include="src\Fugu\Renderer\Buffer.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Camera.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\CameraController.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\RenderCommand.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\Renderer.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\RendererAPI.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\RendererContext.h">
@@ -120,8 +144,14 @@
     <ClInclude Include="src\Fugu\Renderer\Shader.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fugu\Renderer\Texture.h">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\VertexArray.h">
       <Filter>src\Fugu\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fugu\Timestep.h">
+      <Filter>src\Fugu</Filter>
     </ClInclude>
     <ClInclude Include="src\Fugu\Window.h">
       <Filter>src\Fugu</Filter>
@@ -1233,13 +1263,9 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\Fugu\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\Fugu\Renderer\RenderCommand.h" />
-    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Fugu\Platforms\OpenGL\OpenGLShader.h" />
-    <ClInclude Include="src\Fugu\Renderer\Camera.h" />
-    <ClInclude Include="src\Fugu\Renderer\CameraController.h" />
-    <ClInclude Include="src\Fugu\Timestep.h" />
+    <ClInclude Include="vendor\stb_image\stb_image.h">
+      <Filter>vendor\stb_image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fugu\Application.cpp">
@@ -1263,6 +1289,15 @@
     <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLContext.cpp">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Fugu\Platforms\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Fugu\Platforms\OpenGL</Filter>
     </ClCompile>
@@ -1275,10 +1310,25 @@
     <ClCompile Include="src\Fugu\Renderer\Buffer.cpp">
       <Filter>src\Fugu\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Camera.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\CameraController.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\RenderCommand.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\Renderer.cpp">
       <Filter>src\Fugu\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\RendererAPI.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\Shader.cpp">
+      <Filter>src\Fugu\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fugu\Renderer\Texture.cpp">
       <Filter>src\Fugu\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\VertexArray.cpp">
@@ -1287,11 +1337,8 @@
     <ClCompile Include="src\fgpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Fugu\Renderer\RendererAPI.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\RenderCommand.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Fugu\Platforms\OpenGL\OpenGLShader.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\Camera.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\CameraController.cpp" />
+    <ClCompile Include="vendor\stb_image\stb_image.cpp">
+      <Filter>vendor\stb_image</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
