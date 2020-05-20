@@ -166,12 +166,14 @@ namespace Fugu {
 	PerspectiveCamera::PerspectiveCamera(float aspectRatio)
 	{
 		m_AspectRatio = aspectRatio;
+		m_Position = glm::vec3(0.0f, 0.0f, 5.0f);
 	}
 
 	PerspectiveCamera::PerspectiveCamera(float aspectRatio, const glm::vec3& position, const glm::vec3& up)
 		:Camera(position, up)
 	{
 		m_AspectRatio = aspectRatio;
+		m_Position = glm::vec3(0.0f, 0.0f, 5.0f);
 	}
 
 	glm::mat4 PerspectiveCamera::GetProjectionMatrix() const {

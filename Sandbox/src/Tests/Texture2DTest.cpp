@@ -5,9 +5,7 @@
 Texture2DTest::Texture2DTest(const std::string& name) 
 	:Test(name),
 	m_Proj(glm::mat4(1.0f)), m_View(glm::mat4(1.0f)), m_Model(glm::mat4(1.0f)),
-	m_ColorA(1.0f), m_ColorB(1.0f), m_PosA(1.0f), m_PosB(1.0f),
-	 m_VertexArray(nullptr),
-	m_Texture(nullptr), m_Shader(nullptr)
+	m_ColorA(1.0f), m_ColorB(1.0f), m_PosA(1.0f), m_PosB(1.0f)
 {
 	m_VertexArray.reset(Fugu::VertexArray::Create());
 	

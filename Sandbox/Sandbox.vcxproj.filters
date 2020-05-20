@@ -15,6 +15,7 @@
     </ClInclude>
     <ClInclude Include="src\Tests\Texture2DTest.h" />
     <ClInclude Include="src\Tests\ControlColorWithKeyboard.h" />
+    <ClInclude Include="src\Tests\Texture3DTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ExampleLayer.cpp" />
@@ -27,5 +28,6 @@
     </ClCompile>
     <ClCompile Include="src\Tests\Texture2DTest.cpp" />
     <ClCompile Include="src\Tests\ControlColorWithKeyboard.cpp" />
+    <ClCompile Include="src\Tests\Texture3DTest.cpp" />
   </ItemGroup>
 </Project>

@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\ExampleLayer.h" />
+    <ClInclude Include="src\Tests\Texture3DTest.h" />
     <ClInclude Include="src\Tests\ClearColor.h" />
     <ClInclude Include="src\Tests\ControlColorWithKeyboard.h" />
     <ClInclude Include="src\Tests\Test.h" />
@@ -148,6 +149,7 @@
     <ClCompile Include="src\Tests\ControlColorWithKeyboard.cpp" />
     <ClCompile Include="src\Tests\Test.cpp" />
     <ClCompile Include="src\Tests\Texture2DTest.cpp" />
+    <ClCompile Include="src\Tests\Texture3DTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fugu\Fugu.vcxproj">
