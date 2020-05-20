@@ -5,5 +5,7 @@ Todo:
   - Lighting
   - Material System
   - Model Loading
+  - Geometry System
   - Profiling
   - Advanced concepts (AA, Shadow/Normal mapping, batch rendering, cubemaps, PBR, etc.)
+  
