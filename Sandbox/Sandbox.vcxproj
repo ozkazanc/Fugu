@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\ExampleLayer.h" />
+    <ClInclude Include="src\Tests\MoveAround.h" />
     <ClInclude Include="src\Tests\Texture3DTest.h" />
     <ClInclude Include="src\Tests\ClearColor.h" />
     <ClInclude Include="src\Tests\ControlColorWithKeyboard.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="src\Sandbox.cpp" />
     <ClCompile Include="src\Tests\ClearColor.cpp" />
     <ClCompile Include="src\Tests\ControlColorWithKeyboard.cpp" />
+    <ClCompile Include="src\Tests\MoveAround.cpp" />
     <ClCompile Include="src\Tests\Test.cpp" />
     <ClCompile Include="src\Tests\Texture2DTest.cpp" />
     <ClCompile Include="src\Tests\Texture3DTest.cpp" />

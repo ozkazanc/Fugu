@@ -53,6 +53,7 @@ namespace Fugu {
 		virtual glm::mat4 GetProjectionMatrix() const;
 
 		inline glm::vec3 GetCameraPosition() const { return m_Position; }
+		inline void SetLookAround(bool lookAround) { m_LookAround = lookAround; }
 	};
 
 	class OrthographicCamera : public Camera {

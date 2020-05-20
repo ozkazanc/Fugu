@@ -1,7 +1,11 @@
 #pragma once
 
 #include "Fugu.h"
+
 #include "../../Fugu/vendor/imgui/imgui.h"
+#include "glm/glm.hpp"
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Test {
 public:

@@ -1,6 +1,4 @@
 #include "Texture2DTest.h"
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 
 Texture2DTest::Texture2DTest(const std::string& name) 
 	:Test(name),

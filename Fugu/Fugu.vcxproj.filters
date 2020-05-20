@@ -126,9 +126,6 @@
     <ClInclude Include="src\Fugu\Renderer\Camera.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Fugu\Renderer\CameraController.h">
-      <Filter>src\Fugu\Renderer</Filter>
-    </ClInclude>
     <ClInclude Include="src\Fugu\Renderer\RenderCommand.h">
       <Filter>src\Fugu\Renderer</Filter>
     </ClInclude>
@@ -1311,9 +1308,6 @@
       <Filter>src\Fugu\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\Camera.cpp">
-      <Filter>src\Fugu\Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Fugu\Renderer\CameraController.cpp">
       <Filter>src\Fugu\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Fugu\Renderer\RenderCommand.cpp">

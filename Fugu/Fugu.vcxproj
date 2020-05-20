@@ -169,7 +169,6 @@
     <ClInclude Include="src\Fugu\Platforms\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Fugu\Renderer\Buffer.h" />
     <ClInclude Include="src\Fugu\Renderer\Camera.h" />
-    <ClInclude Include="src\Fugu\Renderer\CameraController.h" />
     <ClInclude Include="src\Fugu\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Fugu\Renderer\Renderer.h" />
     <ClInclude Include="src\Fugu\Renderer\RendererAPI.h" />
@@ -566,7 +565,6 @@
     <ClCompile Include="src\Fugu\Platforms\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Fugu\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Fugu\Renderer\Camera.cpp" />
-    <ClCompile Include="src\Fugu\Renderer\CameraController.cpp" />
     <ClCompile Include="src\Fugu\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Fugu\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Fugu\Renderer\RendererAPI.cpp" />
