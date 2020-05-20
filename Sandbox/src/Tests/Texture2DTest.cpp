@@ -89,8 +89,8 @@ Texture2DTest::Texture2DTest(const std::string& name)
 	uint32_t height = Fugu::Application::GetInstance().GetWindow().GetHeight();
 	m_OrthoCamera.reset(new Fugu::OrthographicCamera(width / 100, height / 100));
 
-	m_PosA = glm::vec3(0.0f, 0.0f, 0.0f);
-	m_PosB = glm::vec3(0.0f, 0.0f, 0.0f);
+	m_PosA = glm::vec3(1.0f, 1.0f, 0.0f);
+	m_PosB = glm::vec3(-1.0f, -1.0f, 0.0f);
 	m_ColorA = glm::vec3(0.0f);
 	m_ColorB = glm::vec3(0.0f);
 }

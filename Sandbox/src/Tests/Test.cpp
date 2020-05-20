@@ -1,10 +1,12 @@
 #include "Test.h"
 #include "ClearColor.h"
 #include "Texture2DTest.h"
+#include "ControlColorWithKeyboard.h"
 
 void TestMenu::OnAttach() {
 	RegisterTest<ClearColorTest>("Clear Color");
 	RegisterTest<Texture2DTest>("Texture 2D");
+	RegisterTest<ControlColorWithKeyboardTest>("Control color with keyboard");
 }
 
 void TestMenu::OnImGuiRender() {
