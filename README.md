@@ -6,4 +6,4 @@ Todo:
   - Material System
   - Model Loading
   - Profiling
-  - Advanced concepts (AA, Shadow/Normal mapping, batch rendering, cubemaps, PBR)
+  - Advanced concepts (AA, Shadow/Normal mapping, batch rendering, cubemaps, PBR, etc.)
